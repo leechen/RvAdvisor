@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Web.Http;
 
-namespace Api.Controllers
+namespace Advisor.Api.Controllers
 {
     public class RvParksController : ApiController
     {
