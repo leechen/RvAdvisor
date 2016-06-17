@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Security.Claims;
 using System.Web.Http;
 
 namespace Advisor.Api.Controllers
@@ -6,8 +7,11 @@ namespace Advisor.Api.Controllers
     public class RvParksController : ApiController
     {
         // GET: api/RvParks
+        [Authorize]
         public IEnumerable<string> Get()
         {
+            var principal = User as ClaimsPrincipal;
+
             return new string[] { "value1", "value2" };
         }
 

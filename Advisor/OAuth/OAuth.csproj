@@ -134,6 +134,7 @@
     <Compile Include="Configration\Clients.cs" />
     <Compile Include="Configration\Scopes.cs" />
     <Compile Include="Configration\Users.cs" />
+    <Compile Include="InMemoryManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

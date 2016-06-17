@@ -16,10 +16,13 @@ namespace Advisor.OAuth
         {
             // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=316888
             var certificate = Convert.FromBase64String(ConfigurationManager.AppSettings["SigningCertificate"]);
+
+            var inMemoryManager = new InMemoryManager();
+
             var factory = new IdentityServerServiceFactory()
-                .UseInMemoryUsers(Users.GetUsers())
-                .UseInMemoryScopes(Scopes.GetScopes())
-                .UseInMemoryClients(Clients.GetClients());
+                .UseInMemoryUsers(inMemoryManager.GetUsers())
+                .UseInMemoryScopes(inMemoryManager.GetScopes())
+                .UseInMemoryClients(inMemoryManager.GetClients());
 
             var options = new IdentityServerOptions
             {

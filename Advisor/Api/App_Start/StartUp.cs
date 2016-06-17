@@ -4,8 +4,10 @@ using System.Web.Http;
 using Autofac;
 using Autofac.Integration.WebApi;
 using IdentityServer3.AccessTokenValidation;
+using Microsoft.Owin;
 using Owin;
 
+[assembly: OwinStartup(typeof(Advisor.Api.App_Start.StartUp))]
 namespace Advisor.Api.App_Start
 {
     public class StartUp
