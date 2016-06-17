@@ -17,9 +17,11 @@ namespace Advisor.OAuth
                     Subject = "leeh.chen@gmail.com",
                     Username = "leeh.chen@gmail.com",
                     Password = "password",
+                    
                     Claims = new []
                     {
-                        new Claim(Constants.ClaimTypes.Name, "Lee Chen")
+                        new Claim(Constants.ClaimTypes.Name, "Lee Chen"),
+                        new Claim(Constants.ClaimTypes.PhoneNumber, "888-234-5678")
                     }
                 }
             };

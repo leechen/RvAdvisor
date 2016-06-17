@@ -1,13 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.Security.Claims;
 using System.Web.Http;
+using Thinktecture.IdentityModel.WebApi;
 
 namespace Advisor.Api.Controllers
 {
     public class RvParksController : ApiController
     {
         // GET: api/RvParks
-        [Authorize]
+        [ScopeAuthorize("read")]
         public IEnumerable<string> Get()
         {
             var principal = User as ClaimsPrincipal;
