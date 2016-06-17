@@ -4,7 +4,6 @@ using IdentityServer3.Core.Configuration;
 using Microsoft.Owin;
 using Owin;
 using System.Configuration;
-using Advisor.OAuth.Configration;
 
 [assembly: OwinStartup(typeof(Advisor.OAuth.Startup))]
 
