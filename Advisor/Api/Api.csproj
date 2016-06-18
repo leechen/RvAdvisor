@@ -222,6 +222,10 @@
       <Project>{6C63104E-C77C-4003-9C32-8C5BF086FFF0}</Project>
       <Name>DataAccess</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ObjectModel\ObjectModel.csproj">
+      <Project>{691E86CB-3860-401A-98A6-E6AC21E53E95}</Project>
+      <Name>ObjectModel</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Sdk\Sdk.csproj">
       <Project>{ba7f17f5-9070-4841-b2b0-331bbb99e76d}</Project>
       <Name>Sdk</Name>

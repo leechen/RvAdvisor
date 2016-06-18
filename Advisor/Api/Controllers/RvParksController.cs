@@ -2,6 +2,7 @@
 using System.Security.Claims;
 using System.Web.Http;
 using Advisor.Sdk;
+using ObjectModel;
 using Thinktecture.IdentityModel.WebApi;
 
 namespace Advisor.Api.Controllers
@@ -17,6 +18,8 @@ namespace Advisor.Api.Controllers
         public IEnumerable<string> Get()
         {
             var principal = User as ClaimsPrincipal;
+
+            var res = uow.Get<RvPark>();
 
             return new string[] { "value1", "value2" };
         }
