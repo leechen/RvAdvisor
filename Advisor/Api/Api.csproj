@@ -218,6 +218,10 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{6C63104E-C77C-4003-9C32-8C5BF086FFF0}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Sdk\Sdk.csproj">
       <Project>{ba7f17f5-9070-4841-b2b0-331bbb99e76d}</Project>
       <Name>Sdk</Name>

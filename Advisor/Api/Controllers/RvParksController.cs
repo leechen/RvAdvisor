@@ -1,12 +1,17 @@
 ﻿using System.Collections.Generic;
 using System.Security.Claims;
 using System.Web.Http;
+using Advisor.Sdk;
 using Thinktecture.IdentityModel.WebApi;
 
 namespace Advisor.Api.Controllers
 {
-    public class RvParksController : ApiController
+    public class RvParksController : AdvisorController
     {
+        public RvParksController(IUnitOfWork uow) : base(uow)
+        {
+        }
+
         // GET: api/RvParks
         [ScopeAuthorize("read")]
         public IEnumerable<string> Get()

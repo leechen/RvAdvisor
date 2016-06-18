@@ -5,7 +5,7 @@ namespace Advisor.Api.Controllers
 {
     public class AdvisorController : ApiController
     {
-        private readonly IUnitOfWork uow;
+        protected readonly IUnitOfWork uow;
 
         public AdvisorController(IUnitOfWork uow)
         {

@@ -3,7 +3,7 @@ using System.Data.Entity;
 
 namespace Advisor.DataAccess
 {
-    internal class AdvisorDbContext : DbContext, IAdvisorDataContext
+    public class AdvisorDbContext : DbContext, IAdvisorDataContext
     {
         public virtual EntityState GetEntryState(object entity)
         {
