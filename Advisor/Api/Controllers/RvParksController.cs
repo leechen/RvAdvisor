@@ -16,13 +16,13 @@ namespace Advisor.Api.Controllers
 
         // GET: api/RvParks
         [ScopeAuthorize("read")]
-        public IEnumerable<string> Get()
+        public IEnumerable<RvPark> Get()
         {
             var principal = User as ClaimsPrincipal;
 
             var res = uow.Get<RvPark>().ToList();
 
-            return new string[] { "value1", "value2" };
+            return res;
         }
 
         // GET: api/RvParks/5
