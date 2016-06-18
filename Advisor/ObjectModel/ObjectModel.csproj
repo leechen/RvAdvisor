@@ -7,7 +7,7 @@
     <ProjectGuid>{691E86CB-3860-401A-98A6-E6AC21E53E95}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ObjectModel</RootNamespace>
+    <RootNamespace>Advisor.ObjectModel</RootNamespace>
     <AssemblyName>ObjectModel</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

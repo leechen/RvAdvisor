@@ -2,7 +2,7 @@
 using System.Security.Claims;
 using System.Web.Http;
 using Advisor.Sdk;
-using ObjectModel;
+using Advisor.ObjectModel;
 using Thinktecture.IdentityModel.WebApi;
 
 namespace Advisor.Api.Controllers

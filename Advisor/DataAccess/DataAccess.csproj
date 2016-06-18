@@ -55,6 +55,10 @@
     <Compile Include="UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ObjectModel\ObjectModel.csproj">
+      <Project>{691e86cb-3860-401a-98a6-e6ac21e53e95}</Project>
+      <Name>ObjectModel</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Sdk\Sdk.csproj">
       <Project>{ba7f17f5-9070-4841-b2b0-331bbb99e76d}</Project>
       <Name>Sdk</Name>

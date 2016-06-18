@@ -1,7 +1,7 @@
 ﻿using System;
 using Advisor.Sdk;
 
-namespace ObjectModel
+namespace Advisor.ObjectModel
 {
     public class RvPark : Entity
     {
