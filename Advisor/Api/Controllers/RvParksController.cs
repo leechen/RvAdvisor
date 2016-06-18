@@ -4,6 +4,7 @@ using System.Web.Http;
 using Advisor.Sdk;
 using Advisor.ObjectModel;
 using Thinktecture.IdentityModel.WebApi;
+using System.Linq;
 
 namespace Advisor.Api.Controllers
 {
@@ -19,7 +20,7 @@ namespace Advisor.Api.Controllers
         {
             var principal = User as ClaimsPrincipal;
 
-            var res = uow.Get<RvPark>();
+            var res = uow.Get<RvPark>().ToList();
 
             return new string[] { "value1", "value2" };
         }

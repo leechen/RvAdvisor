@@ -19,7 +19,7 @@ namespace Advisor.DataAccess
         }
         public IQueryable<TEntity> Get<TEntity>() where TEntity : Entity
         {
-            throw new NotImplementedException();
+            return context.Set<TEntity>().Where(e => !e.IsDeleted);
         }
 
         public void Dispose()
