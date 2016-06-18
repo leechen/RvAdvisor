@@ -1,9 +1,11 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 
 namespace Advisor.Sdk
 {
-    public interface IUnitOfWork
+    public interface IUnitOfWork : IDisposable
     {
         IQueryable<TEntity> Get<TEntity>() where TEntity : Entity;
+
     }
 }

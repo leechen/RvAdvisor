@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Tests", "Api.Tests\Api.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OAuth", "OAuth\OAuth.csproj", "{F67DED95-E9B6-4BEB-9385-C9EAC7E83B2D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectModel", "ObjectModel\ObjectModel.csproj", "{691E86CB-3860-401A-98A6-E6AC21E53E95}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{F67DED95-E9B6-4BEB-9385-C9EAC7E83B2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F67DED95-E9B6-4BEB-9385-C9EAC7E83B2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F67DED95-E9B6-4BEB-9385-C9EAC7E83B2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{691E86CB-3860-401A-98A6-E6AC21E53E95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{691E86CB-3860-401A-98A6-E6AC21E53E95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{691E86CB-3860-401A-98A6-E6AC21E53E95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{691E86CB-3860-401A-98A6-E6AC21E53E95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -188,6 +188,7 @@
     <Compile Include="App_Start\StartUp.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Autofac\Modules\AdvisorModule.cs" />
+    <Compile Include="Controllers\AdvisorController.cs" />
     <Compile Include="Controllers\RvParksController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -215,6 +216,12 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sdk\Sdk.csproj">
+      <Project>{ba7f17f5-9070-4841-b2b0-331bbb99e76d}</Project>
+      <Name>Sdk</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

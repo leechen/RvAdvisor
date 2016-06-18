@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BA7F17F5-9070-4841-B2B0-331BBB99E76D}</ProjectGuid>
+    <ProjectGuid>{691E86CB-3860-401A-98A6-E6AC21E53E95}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Advisor.Sdk</RootNamespace>
-    <AssemblyName>Sdk</AssemblyName>
+    <RootNamespace>ObjectModel</RootNamespace>
+    <AssemblyName>ObjectModel</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,7 +32,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,7 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entity.cs" />
-    <Compile Include="IUnitOfWork.cs" />
+    <Compile Include="RvPark.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
