@@ -55,6 +55,10 @@
     <Compile Include="Migrations\201606182127221_InitialCreate.Designer.cs">
       <DependentUpon>201606182127221_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201606222012040_AddAddressRelatedEntities.cs" />
+    <Compile Include="Migrations\201606222012040_AddAddressRelatedEntities.Designer.cs">
+      <DependentUpon>201606222012040_AddAddressRelatedEntities.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitOfWork.cs" />
@@ -76,6 +80,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201606182127221_InitialCreate.resx">
       <DependentUpon>201606182127221_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606222012040_AddAddressRelatedEntities.resx">
+      <DependentUpon>201606222012040_AddAddressRelatedEntities.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

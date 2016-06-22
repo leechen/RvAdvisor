@@ -7,6 +7,8 @@ namespace Advisor.DataAccess
     public class AdvisorDbContext : DbContext, IAdvisorDataContext
     {
         public DbSet<RvPark> RvParks { get; set; }
+        public DbSet<Address> Addresses { get; set; }
+        public DbSet<Area> Areas { get; set; }
 
         public virtual EntityState GetEntryState(object entity)
         {
