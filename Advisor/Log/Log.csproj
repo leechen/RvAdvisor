@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="RegisterEventSources.ps1" />
     <None Include="_EventRegisterUsersGuide.docx" />
     <None Include="_EventSourceUsersGuide.docx" />
   </ItemGroup>
