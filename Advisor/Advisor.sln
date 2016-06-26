@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OAuth", "OAuth\OAuth.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObjectModel", "ObjectModel\ObjectModel.csproj", "{691E86CB-3860-401A-98A6-E6AC21E53E95}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log", "Log\Log.csproj", "{DC76CFFC-A0FB-48BD-A9CB-F634166FF235}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{55016962-29B8-4ADA-BFF0-2D9CBA5C0028}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{691E86CB-3860-401A-98A6-E6AC21E53E95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{691E86CB-3860-401A-98A6-E6AC21E53E95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{691E86CB-3860-401A-98A6-E6AC21E53E95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC76CFFC-A0FB-48BD-A9CB-F634166FF235}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC76CFFC-A0FB-48BD-A9CB-F634166FF235}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC76CFFC-A0FB-48BD-A9CB-F634166FF235}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC76CFFC-A0FB-48BD-A9CB-F634166FF235}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55016962-29B8-4ADA-BFF0-2D9CBA5C0028}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55016962-29B8-4ADA-BFF0-2D9CBA5C0028}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55016962-29B8-4ADA-BFF0-2D9CBA5C0028}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55016962-29B8-4ADA-BFF0-2D9CBA5C0028}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

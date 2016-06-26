@@ -198,6 +198,7 @@
     <Compile Include="Autofac\Modules\AdvisorModule.cs" />
     <Compile Include="Controllers\AdvisorController.cs" />
     <Compile Include="Controllers\RvParksController.cs" />
+    <Compile Include="Filters\LogActionAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -229,6 +230,10 @@
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
       <Project>{6C63104E-C77C-4003-9C32-8C5BF086FFF0}</Project>
       <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Log\Log.csproj">
+      <Project>{DC76CFFC-A0FB-48BD-A9CB-F634166FF235}</Project>
+      <Name>Log</Name>
     </ProjectReference>
     <ProjectReference Include="..\ObjectModel\ObjectModel.csproj">
       <Project>{691E86CB-3860-401A-98A6-E6AC21E53E95}</Project>

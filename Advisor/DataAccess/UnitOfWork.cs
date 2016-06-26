@@ -30,11 +30,11 @@ namespace Advisor.DataAccess
             GC.SuppressFinalize(this);
         }
 
-        private void Dispose(bool v)
+        private void Dispose(bool disposing)
         {
             if (!disposed)
             {
-                if (v)
+                if (disposing)
                 {
                     context.Dispose();
                 }
