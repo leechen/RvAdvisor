@@ -19,9 +19,11 @@ namespace Advisor.DataAccess.Migrations
             context.RvParks.AddOrUpdate(
               ObjectModelHelper.NewRvPark(
                   "Trailer Inns RV Park of Bellevue/Seattle",
+                  "425-747-9181",
                   "Trailer Inns of Bellevue, WA 98006"),
               ObjectModelHelper.NewRvPark(
                   "Issaquah Village RV Par",
+                  "425-392-9233",
                   "If you are looking for first-class service, you have come to the right place! "
                                 + "We put our customers first.Come visit to see what we are all about and have a relaxing stay. "
                                 + "We are here to serve you and answer any questions you may have")

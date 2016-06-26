@@ -5,9 +5,12 @@ using Advisor.Sdk;
 using Advisor.ObjectModel;
 using Thinktecture.IdentityModel.WebApi;
 using System.Linq;
+using System.Net;
+using System;
 
 namespace Advisor.Api.Controllers
 {
+    [RoutePrefix("api/rvparks")]
     public class RvParksController : AdvisorController
     {
         public RvParksController(IUnitOfWork uow) : base(uow)
@@ -15,7 +18,8 @@ namespace Advisor.Api.Controllers
         }
 
         // GET: api/RvParks
-        [ScopeAuthorize("read")]
+        //[ScopeAuthorize("read")]
+        [Route("")]
         public IEnumerable<RvPark> Get()
         {
             var principal = User as ClaimsPrincipal;
@@ -26,24 +30,50 @@ namespace Advisor.Api.Controllers
         }
 
         // GET: api/RvParks/5
-        public string Get(int id)
+        [Route("{id:int}", Name = "GetRvParkById")]
+        public RvPark Get(int id)
         {
-            return "value";
+            return uow.Get<RvPark>(id);
         }
 
         // POST: api/RvParks
-        public void Post([FromBody]string value)
+        [Route("")]
+        public IHttpActionResult Post([FromBody]RvPark park)
         {
+            try
+            {
+                uow.Add(park);
+                uow.SaveChanges();
+                return StatusCode(HttpStatusCode.Created);
+            }
+            catch (Exception ex)
+            {
+                // log
+                return StatusCode(HttpStatusCode.Conflict);
+            }
         }
 
         // PUT: api/RvParks/5
-        public void Put(int id, [FromBody]string value)
+        [Route("{id:int}")]
+        public void Put(int id, [FromBody]RvPark park)
         {
         }
 
         // DELETE: api/RvParks/5
-        public void Delete(int id)
+        [Route("{id:int}")]
+        public IHttpActionResult Delete(int id)
         {
+            RvPark park = uow.Get<RvPark>(id);
+
+            if (park == null)
+            {
+                return NotFound();
+            }
+
+            park.IsDeleted = true;
+            uow.SaveChanges();
+
+            return StatusCode(HttpStatusCode.NoContent);
         }
     }
 }

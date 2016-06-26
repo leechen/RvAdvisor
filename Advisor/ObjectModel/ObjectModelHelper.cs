@@ -9,11 +9,12 @@ namespace Advisor.ObjectModel
 {
     public class ObjectModelHelper
     {
-        public static RvPark NewRvPark(string name, string desc)
+        public static RvPark NewRvPark(string name, string phone, string desc)
         {
             var park = new RvPark
             {
                 Name = name,
+                Phone = phone,
                 Description = desc,
             };
 

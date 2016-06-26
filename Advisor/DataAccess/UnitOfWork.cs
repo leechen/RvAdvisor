@@ -8,6 +8,7 @@ namespace Advisor.DataAccess
     public class UnitOfWork : IUnitOfWork
     {
         private IAdvisorDataContext context;
+        private bool disposed;
 
         public UnitOfWork()
             : this(new AdvisorDbContext())
@@ -25,7 +26,20 @@ namespace Advisor.DataAccess
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        private void Dispose(bool v)
+        {
+            if (!disposed)
+            {
+                if (v)
+                {
+                    context.Dispose();
+                }
+            }
+            disposed = true;
         }
 
         public TEntity Get<TEntity>(int id) where TEntity : Entity
