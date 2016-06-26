@@ -8,6 +8,7 @@ using System.Linq;
 using System.Net;
 using System;
 using System.Web.Http.Description;
+using Advisor.Log;
 
 namespace Advisor.Api.Controllers
 {
@@ -51,7 +52,7 @@ namespace Advisor.Api.Controllers
             }
             catch (Exception ex)
             {
-                // log
+                ApiEventSource.Log.Exception(ex.Message);
                 return StatusCode(HttpStatusCode.Conflict);
             }
         }
