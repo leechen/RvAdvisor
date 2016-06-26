@@ -57,9 +57,27 @@ namespace Advisor.Api.Controllers
         }
 
         // PUT: api/RvParks/5
+        [HttpPut]
+        [ResponseType(typeof(RvPark))]
         [Route("{id:int}")]
-        public void Put(int id, [FromBody]RvPark park)
+        public IHttpActionResult Put(int id, [FromBody]RvPark park)
         {
+            RvPark cur = uow.Get<RvPark>(id);
+
+            if (cur == null)
+            {
+                return NotFound();
+            }
+
+            cur.Name = park.Name;
+            cur.Phone = park.Phone;
+            cur.Description = park.Description;
+            cur.Capacity = park.Capacity;
+            cur.Address = park.Address;
+
+            uow.SaveChanges();
+
+            return Ok(cur);
         }
 
         // DELETE: api/RvParks/5
