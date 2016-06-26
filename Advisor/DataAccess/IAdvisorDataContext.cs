@@ -7,5 +7,6 @@ namespace Advisor.DataAccess
     {
         EntityState GetEntryState(object entity);
         DbSet<TEntity> Set<TEntity>() where TEntity : class;
+        int SaveChanges();
     }
 }
