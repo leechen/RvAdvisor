@@ -14,7 +14,9 @@ namespace Advisor.Api.App_Start
     {
         public void Configuration(IAppBuilder app)
         {
-            var config = GlobalConfiguration.Configuration;
+            // http://stackoverflow.com/questions/28473320/ninject-causes-notimplementedexception-at-httpcontextbase-get-response
+            var config = new HttpConfiguration();
+            config.MapHttpAttributeRoutes();
 
             var builder = new ContainerBuilder();
             builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
@@ -30,6 +32,9 @@ namespace Advisor.Api.App_Start
             });
 
             app.UseWebApi(config);
+
+            config.EnsureInitialized();
+            GlobalConfiguration.Configuration.EnsureInitialized();
         }
     }
 }

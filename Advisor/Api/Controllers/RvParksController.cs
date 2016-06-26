@@ -7,6 +7,7 @@ using Thinktecture.IdentityModel.WebApi;
 using System.Linq;
 using System.Net;
 using System;
+using System.Web.Http.Description;
 
 namespace Advisor.Api.Controllers
 {
@@ -37,14 +38,16 @@ namespace Advisor.Api.Controllers
         }
 
         // POST: api/RvParks
+        [HttpPost]
         [Route("")]
+        [ResponseType(typeof(RvPark))]
         public IHttpActionResult Post([FromBody]RvPark park)
         {
             try
             {
                 uow.Add(park);
                 uow.SaveChanges();
-                return StatusCode(HttpStatusCode.Created);
+                return CreatedAtRoute("GetRvParkById", new { id = park.Id }, park);
             }
             catch (Exception ex)
             {
