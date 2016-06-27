@@ -6,6 +6,7 @@ using Autofac.Integration.WebApi;
 using IdentityServer3.AccessTokenValidation;
 using Microsoft.Owin;
 using Owin;
+using Advisor.Api.Filters;
 
 [assembly: OwinStartup(typeof(Advisor.Api.App_Start.StartUp))]
 namespace Advisor.Api.App_Start
@@ -17,6 +18,7 @@ namespace Advisor.Api.App_Start
             // http://stackoverflow.com/questions/28473320/ninject-causes-notimplementedexception-at-httpcontextbase-get-response
             var config = new HttpConfiguration();
             config.MapHttpAttributeRoutes();
+            config.Filters.Add(new LogActionAttribute());
 
             var builder = new ContainerBuilder();
             builder.RegisterApiControllers(Assembly.GetExecutingAssembly());

@@ -20,7 +20,7 @@ namespace Advisor.Api.Controllers
         }
 
         // GET: api/RvParks
-        //[ScopeAuthorize("read")]
+        [ScopeAuthorize("read")]
         [Route("")]
         public IEnumerable<RvPark> Get()
         {

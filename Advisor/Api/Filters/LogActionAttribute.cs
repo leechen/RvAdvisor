@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Web;
 using System.Web.Http.Controllers;
 using System.Web.Http.Filters;
@@ -14,12 +15,22 @@ namespace Advisor.Api.Filters
         public override void OnActionExecuting(HttpActionContext actionContext)
         {
             HttpLog log = GetLog(actionContext);
-            // call EventSource to log
+            ApiEventSource.Log.GetBegin(log.UserName, log.Uri.AbsoluteUri);
         }
 
         private HttpLog GetLog(HttpActionContext actionContext)
         {
-            throw new NotImplementedException();
+            var claimsPrincipal = actionContext.RequestContext.Principal as ClaimsPrincipal;
+            var userName = claimsPrincipal?.FindFirst(
+                "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier").Value;
+
+            if (userName == null) { userName = "anonymous"; }
+
+            return new HttpLog(
+                userName,
+                actionContext.Request.Method.ToString(),
+                actionContext.Request.RequestUri,
+                "");
         }
     }
 }

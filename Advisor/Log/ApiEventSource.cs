@@ -49,9 +49,9 @@ namespace Advisor.Log
         }
 
         [Event(postEndEventId, Message = "{0} ended POST at {1}", Level = EventLevel.Informational, Channel = EventChannel.Operational)]
-        public void PostEnd(string userName, string url, string jsonData)
+        public void PostEnd(string userName, string url)
         {
-            WriteEvent(postEndEventId, userName, url, jsonData);
+            WriteEvent(postEndEventId, userName, url);
         }
 
         [Event(putBeginEventId, Message = "{0} began PUT at {1}", Level = EventLevel.Informational, Channel = EventChannel.Operational)]
@@ -61,18 +61,18 @@ namespace Advisor.Log
         }
 
         [Event(putEndEventId, Message = "{0} ended PUT at {1}", Level = EventLevel.Informational, Channel = EventChannel.Operational)]
-        public void PutEnd(string userName, string url, string jsonData)
+        public void PutEnd(string userName, string url)
         {
-            WriteEvent(putEndEventId, userName, url, jsonData);
+            WriteEvent(putEndEventId, userName, url);
         }
 
-        [Event(deleteBeginEventId, Message = "{0} began DELETE at {1}", Level = EventLevel.Verbose, Channel = EventChannel.Operational)]
+        [Event(deleteBeginEventId, Message = "{0} began DELETE at {1}", Level = EventLevel.Informational, Channel = EventChannel.Operational)]
         public void DeleteBegin(string userName, string url)
         {
             WriteEvent(deleteBeginEventId, userName, url);
         }
 
-        [Event(deleteEndEventId, Message = "{0} ended DELETE at {1}", Level = EventLevel.Verbose, Channel = EventChannel.Operational)]
+        [Event(deleteEndEventId, Message = "{0} ended DELETE at {1}", Level = EventLevel.Informational, Channel = EventChannel.Operational)]
         public void DeleteEnd(string userName, string url)
         {
             WriteEvent(deleteEndEventId, userName, url);
