@@ -55,13 +55,9 @@
     <Compile Include="Migrations\201606182127221_InitialCreate.Designer.cs">
       <DependentUpon>201606182127221_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201606222012040_AddAddressRelatedEntities.cs" />
-    <Compile Include="Migrations\201606222012040_AddAddressRelatedEntities.Designer.cs">
-      <DependentUpon>201606222012040_AddAddressRelatedEntities.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201606261946386_AddUniqueIndexInRvPark.cs" />
-    <Compile Include="Migrations\201606261946386_AddUniqueIndexInRvPark.Designer.cs">
-      <DependentUpon>201606261946386_AddUniqueIndexInRvPark.cs</DependentUpon>
+    <Compile Include="Migrations\201608101828132_AddedAddress.cs" />
+    <Compile Include="Migrations\201608101828132_AddedAddress.Designer.cs">
+      <DependentUpon>201608101828132_AddedAddress.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,11 +81,8 @@
     <EmbeddedResource Include="Migrations\201606182127221_InitialCreate.resx">
       <DependentUpon>201606182127221_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201606222012040_AddAddressRelatedEntities.resx">
-      <DependentUpon>201606222012040_AddAddressRelatedEntities.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201606261946386_AddUniqueIndexInRvPark.resx">
-      <DependentUpon>201606261946386_AddUniqueIndexInRvPark.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201608101828132_AddedAddress.resx">
+      <DependentUpon>201608101828132_AddedAddress.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
